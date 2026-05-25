@@ -46,8 +46,8 @@ Requires: qt5-qpa-hwcomposer-plugin
 Requires: qtscenegraph-adaptation
 
 # For hybris devices with droidmedia, see HADK pdf for more information
-Requires: gstreamer1.0-droid
-Requires: gmp-droid
+#Requires: gstreamer1.0-droid
+#Requires: gmp-droid
 
 # This is needed for notification LEDs
 Requires: mce-plugin-libhybris
@@ -75,8 +75,10 @@ Requires: geoclue-provider-hybris
 # 1. binder plugin requires Android 8 or a newer base
 # 2. pn54x plugin talks directly to pn54x driver
 # These plugins are mutually exclusive, you need to pick one:
-#Requires: nfcd-binder-plugin
+Requires: nfcd-binder-plugin
 #Requires: nfcd-pn54x-plugin
+
+Requires: parse-android-dynparts
 
 %description -n patterns-sailfish-device-adaptation-panther
 Pattern with packages for panther HW Adaptation
