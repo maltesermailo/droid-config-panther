@@ -1,0 +1,1 @@
+service vendor.usb-gadget-hal /vendor/bin/hw/android.hardware.usb.gadget-service_HYBRIS_DISABLED
