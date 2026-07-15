@@ -26,8 +26,21 @@ Requires: hybris-libsensorfw-qt5
 Requires: ngfd-plugin-native-vibrator
 Requires: libngf-qt5-qtfeedback
 
+# Telephony
+Requires: ofono-binder-plugin
+Requires: dummy_netd
+# VoLTE
+Requires: ofono-binder-plugin-ext-qti
+
+# Bluetooth
+Requires: bluebinder
+
+
 # Needed for /dev/touchscreen symlink
 Requires: qt5-plugin-generic-evdev
+
+# Fixes Qt crash due to TLS slots conflicts
+Requires: libtls-padding
 
 Requires: pulseaudio-modules-droid
 Requires: pulseaudio-modules-droid-hidl
@@ -59,10 +72,10 @@ Requires: usb-moded
 Requires: rfkill
 
 # enable device lock and allow to select untrusted software
-Requires: jolla-devicelock-daemon-encsfa
+#Requires: jolla-devicelock-daemon-encsfa
 
 # Enable home encryption
-Requires: sailfish-device-encryption
+#Requires: sailfish-device-encryption
 
 # For GPS
 Requires: geoclue-provider-hybris
@@ -77,6 +90,13 @@ Requires: geoclue-provider-hybris
 # These plugins are mutually exclusive, you need to pick one:
 Requires: nfcd-binder-plugin
 #Requires: nfcd-pn54x-plugin
+
+# Enable fingerprint reader
+Requires: sailfish-devicelock-fpd
+Requires: sailfish-fpd
+
+# Splash screen
+Requires: yamuisplash
 
 Requires: parse-android-dynparts
 

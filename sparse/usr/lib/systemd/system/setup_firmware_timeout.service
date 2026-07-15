@@ -1,0 +1,12 @@
+[Unit]
+Description=Change firmware timeout to 1 to skip udev-settle timeout
+Before=systemd-udev-settle.service
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/bash /usr/bin/droid/set-firmware-timeout.sh
+
+[Install]
+WantedBy=droid-hal-init.service
